@@ -77,6 +77,9 @@ a {
     text-decoration: none;
 }
 
+body {
+    position: relative;
+}
 /* small screen */
 @media (min-width: 768px) {
     .container {
@@ -1148,3 +1151,45 @@ footer .container p span {
     color: var(--main-color);
 }
 /* footer end */
+
+/* scroll-top start */
+
+.scroll-top {
+    position: absolute;
+    top: 150vh;
+    right: 20px;
+    bottom: 0;
+    z-index: 3;
+}
+
+.scroll-top a {
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: black;
+    position: sticky;
+    top: 92%;
+    right: 50px;
+}
+
+.scroll-top a:hover i {
+    animation: scroll-top 1.5s ease-out infinite;
+}
+
+@keyframes scroll-top {
+
+    0% {
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+/* scroll-top end */
